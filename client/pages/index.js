@@ -1,11 +1,19 @@
-import '../assets/styles/sass/custom.scss';
-import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import React, { useRef } from 'react'
 
-const Index = () => (
-  <div className="container test">
-    <p>Hello Next.js</p>
-    <a href="/utilities">Utilities</a>
-  </div>
-);
+import HtmlHead from '../src/components/HtmlHead';
+import App from '../src/components/App';
+
+import '../assets/styles/sass/custom.scss';
+
+const Index = () => {
+  const htmlHead = useRef();
+  console.log('htmlHead: ', htmlHead);
+  return (
+    <div>
+      <HtmlHead />
+      <App />
+    </div>
+  );
+};
 
 export default Index;
